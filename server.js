@@ -1,4 +1,5 @@
 const express = require('express');
+const routes = require('./routes')
 
 const PORT = 3001;
 
@@ -9,6 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.use(express.static('public'));
+app.use(routes)
 
 app.listen(PORT, () =>
   console.log(`Express server listening on port ${PORT}!`)
