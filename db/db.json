@@ -1,6 +1,1 @@
-[
-    {
-        "title":"Test Title",
-        "text":"Test text"
-    }
-]
+[{"id":"1","title":"Test Title","text":"Test text"},{"title":"my new note","text":"one piece is cool","id":"c44a923a-e992-434a-90f5-5251bc0ee307"},{"title":"my new note","text":"one piece is cool","id":"23ac371f-cbac-4039-b130-535ed19cdf13"},{"title":"ded","text":"eded","id":"689a415d-3188-4576-b114-47c7cbbd0715"}]

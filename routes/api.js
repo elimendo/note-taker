@@ -1,11 +1,14 @@
-const router = require('express').Router();
-const {getNotes, writeNote, deleteNote} = require("../db/store")
+const router = require("express").Router();
+const store = require("../db/store");
 
-router.get("/notes", (req, res)=> {
-res.json(getNotes())
+router.get("/notes", (req, res) => {
+    store.getNotes().then(notes=>{
+        return res.json(notes)
+    })
+});
+
+router.post("/notes", (req,res)=>{
+    store.writeNote(req.body).then(note=>res.json(note))
 })
 
-
-
-
-module.exports = router
+module.exports = router;
