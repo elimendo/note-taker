@@ -29,7 +29,12 @@ class Store {
       .then(() => note);
   }
 
-  deleteNote() {}
+  deleteNote(id) {
+
+    return this.getNotes()
+      .then((notes) =>  notes.filter((note) => note.id !== id))
+      .then((filteredNotes) => write(filteredNotes));
+  }
 }
 
 module.exports = new Store();
